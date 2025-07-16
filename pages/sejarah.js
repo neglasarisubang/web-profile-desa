@@ -75,13 +75,13 @@ export default function Sejarah({ posts }) {
                         <div className="card bg-card-primary border-0 shadow-sm px-3 py-3 mb-4">
                             <h3 className="text-color-primary">Peta Desa</h3>
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55025.830477406416!2d112.70216338981292!3d-7.023406162641918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd80f60554b1adf%3A0xe181faf130f4decf!2sBangakalan%2C%20Kec.%20Bangkalan%2C%20Kabupaten%20Bangkalan%2C%20Jawa%20Timur!5e1!3m2!1sid!2sid!4v1639908491736!5m2!1sid!2sid"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5634240142444!2d107.79720019999999!3d-6.4500519999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6939bd85cad98f%3A0x275bcf66db2f3763!2sCandil%20Kuya%20-%20Jasa%20Website!5e0!3m2!1sid!2sid!4v1752641501432!5m2!1sid!2sid"
                                 className="rounded mt-3 maps" allowFullScreen="" title="Peta Desa"
                                 loading="lazy"></iframe>
                         </div>
                         <div className="card bg-card-primary border-0 shadow-sm px-3 py-3 mb-4">
                             <h3 className="text-color-primary">Peta Geospatial</h3>
-                            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=14LgEJiY6STWUfRxSVHHUMmqKFqsWdZyc&ehbc=2E312F"
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4703.012346725019!2d107.79720019999999!3d-6.450051999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6939bd85cad98f%3A0x275bcf66db2f3763!2sCandil%20Kuya%20-%20Jasa%20Website!5e1!3m2!1sid!2sid!4v1752641711189!5m2!1sid!2sid"
                                 className="rounded mt-3 maps" allowFullScreen="" title="Peta Geospatial"
                                 loading="lazy"></iframe>
                         </div>

@@ -8,15 +8,20 @@ import BackToTop from "../components/BackToTop";
 const title = "Wilayah Administrasi";
 
 export default function InformasiPublik({ covid }) {
-    let [namaDesa, setNamaDesa] = useState("Alang Alang");
-    let [namaKecamatan, setNamaKecamatan] = useState("Tragah");
+    const [namaDesa, setNamaDesa] = useState("Neglasari");
+    const [namaKecamatan, setNamaKecamatan] = useState("Neglasari");
 
     useEffect(() => {
-        namaDesa = localStorage.getItem("namaDesa");
-        setNamaDesa(namaDesa);
-        namaKecamatan = localStorage.getItem("namaKecamatan");
-        setNamaKecamatan(namaKecamatan);
-    })
+        const storedNamaDesa = localStorage.getItem("namaDesa");
+        if (storedNamaDesa) {
+            setNamaDesa(storedNamaDesa);
+        }
+
+        const storedNamaKecamatan = localStorage.getItem("namaKecamatan");
+        if (storedNamaKecamatan) {
+            setNamaKecamatan(storedNamaKecamatan);
+        }
+    }, []); 
 
     // const dataGender = populateData(gender);
     // const [totalKonfirmasi, totalAktif, totalSembuh, totalMeninggal] = getTotalData(covid);

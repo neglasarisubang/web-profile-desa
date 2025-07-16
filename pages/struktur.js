@@ -10,12 +10,14 @@ import BackToTop from "../components/BackToTop";
 const title = "Struktur";
 
 export default function Struktur({ posts }) {
-    let [namaDesa, setNamaDesa] = useState("Alang Alang");
+    const [namaDesa, setNamaDesa] = useState("Neglasari");
 
     useEffect(() => {
-        namaDesa = localStorage.getItem("namaDesa");
-        setNamaDesa(namaDesa);
-    });
+        const storedNamaDesa = localStorage.getItem("namaDesa");
+        if (storedNamaDesa) {
+            setNamaDesa(storedNamaDesa);
+        }
+    }, []);
 
     return (
         <>

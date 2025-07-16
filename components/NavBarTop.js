@@ -118,8 +118,8 @@ export default function NavBarTop() {
                                 className="img-fluid"
                             />{" "}
                             <div>
-                                <h5 className="ms-1 my-0 fw-600 text-color-primary">Desa {namaDesa}</h5>
-                                <p className="ms-1 mb-0 text-15 text-color-tertiary">Kabupaten Bangkalan</p>
+                                <h5 className="ms-1 my-0 fw-600 text-color-primary">Tjikoeja {namaDesa}</h5>
+                                <p className="ms-1 mb-0 text-15 text-color-tertiary">RT/RW 19/10</p>
                             </div>
                         </a>
                     </Link>
@@ -248,12 +248,12 @@ export default function NavBarTop() {
                                     <a className="nav-link text-color-tertiary">Lapak</a>
                                 </ActiveLink>
                             </li>
-                            <li className="nav-item ms-lg-1">
+                             {/*<li className="nav-item ms-lg-1">
                                 <ActiveLink activeClassName="active" href="/covid">
                                     <a className="nav-link text-color-tertiary">Covid</a>
                                 </ActiveLink>
                             </li>
-                            {/* <li className="nav-item ms-lg-1">
+                            <li className="nav-item ms-lg-1">
                                 <a className="nav-link" aria-current="page"><ThemeToggle /></a>
                             </li> */}
                         </ul>

@@ -32,18 +32,19 @@ import 'aos/dist/aos.css';
 SwiperCore.use([Autoplay, Pagination]);
 
 export default function Home({ posts, agendas, videos, photos }) {
-    let [namaDesa, setNamaDesa] = useState("Alang Alang");
-    let [namaKecamatan, setNamaKecamatan] = useState("Tragah");
+    let [namaDesa, setNamaDesa] = useState("Neglasari");
+    let [namaKecamatan, setNamaKecamatan] = useState("Neglasari");
 
-    useEffect(() => {
-        AOS.init({
-            once: true,
-        });
-        namaDesa = localStorage.getItem("namaDesa");
-        setNamaDesa(namaDesa);
-        namaKecamatan = localStorage.getItem("namaKecamatan");
-        setNamaKecamatan(namaKecamatan);
-    });
+useEffect(() => {
+  AOS.init({ once: true });
+
+  const storedDesa = localStorage.getItem("namaDesa");
+  const storedKecamatan = localStorage.getItem("namaKecamatan");
+
+  if (storedDesa) setNamaDesa(storedDesa);
+  if (storedKecamatan) setNamaKecamatan(storedKecamatan);
+}, []);
+
 
     // Take only 3 item as featured
     const featuredPost = posts.slice(0, 4);
@@ -131,7 +132,7 @@ export default function Home({ posts, agendas, videos, photos }) {
                                 <div className="text-center text-md-start mt-3 mt-md-0">
                                     <h3 className="pb-2 text-color-primary">Website Desa {namaDesa}</h3>
                                     <p className="text-color-secondary" id="scroll-to-statistic">
-                                        Website Resmi Desa {namaDesa}, Kec. {namaKecamatan}, Kabupaten Bangkalan, Jawa Timur. Media komunikasi dan transparansi Pemerintah Desa untuk seluruh masyarakat di Indonesia
+                                        Website Resmi Desa {namaDesa}, Kec. {namaKecamatan}, Kabupaten Subang, Jawa Barat. Media komunikasi dan transparansi Pemerintah Desa untuk seluruh masyarakat di Indonesia
                                     </p>
                                     <Link href="/sejarah">
                                         <a className="btn btn-primary shadow rounded px-3 scroll-to">Profil Desa 
@@ -366,7 +367,7 @@ export default function Home({ posts, agendas, videos, photos }) {
                     </div>
                 </div>
 
-                <SistemDesa />
+          
 
             </main>
 
