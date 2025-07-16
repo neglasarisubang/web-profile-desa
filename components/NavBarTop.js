@@ -10,12 +10,15 @@ const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
 });
 
 export default function NavBarTop() {
-    let [namaDesa, setNamaDesa] = useState("Alang Alang");
+    let [namaDesa, setNamaDesa] = useState("Neglasari");
 
-    useEffect(() => {
-        namaDesa = localStorage.getItem("namaDesa");
-        setNamaDesa(namaDesa);
-    });
+useEffect(() => {
+    const storedNamaDesa = localStorage.getItem("namaDesa");
+    if (storedNamaDesa) setNamaDesa(storedNamaDesa);
+
+    const storedNamaKecamatan = localStorage.getItem("namaKecamatan");
+    if (storedNamaKecamatan) setNamaKecamatan(storedNamaKecamatan);
+}, []);
 
     const [isFixedNavbar, setFixedNavbar] = useState("false");
 

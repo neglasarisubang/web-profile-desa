@@ -1,17 +1,17 @@
 import { useEffect } from "react";
 import React, { useState, useCallback } from "react";
 import Image from "next/image";
-import imgHero from "../public/tjikoeja.jpg";
-import imgHeroA from "../public/masjid.jpg";
-import imgHeroB from "../public/cikuya.jpg";
 
 export default function CarouselHome() {
-    let [namaDesa, setNamaDesa] = useState("Alang Alang");
+    let [namaDesa, setNamaDesa] = useState("Neglasari");
 
-    useEffect(() => {
-        namaDesa = localStorage.getItem("namaDesa");
-        setNamaDesa(namaDesa);
-    });
+useEffect(() => {
+    const storedNamaDesa = localStorage.getItem("namaDesa");
+    if (storedNamaDesa) {
+        setNamaDesa(storedNamaDesa);
+    }
+}, []);  // Jangan lupa dependency array
+
 
     return (
         <>
@@ -67,18 +67,14 @@ export default function CarouselHome() {
                 }
             `}</style>
 
-            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                {/* <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                </div> */}
+           <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <Image
                             alt="Carousel"
-                            src={imgHero}
-                            width="1920"
-                            height="960"
+                            src="/tjikoeja.jpg"
+                            width={1920}
+                            height={960}
                             className="d-block w-100 carousel-zoom"
                         />
                         <div className="carousel-overlay"></div>
@@ -90,9 +86,9 @@ export default function CarouselHome() {
                     <div className="carousel-item">
                         <Image
                             alt="Carousel"
-                            src={imgHeroA}
-                            width="1920"
-                            height="960"
+                            src="/masjid.jpg"
+                            width={1920}
+                            height={960}
                             className="d-block w-100 carousel-zoom"
                         />
                         <div className="carousel-overlay"></div>
@@ -104,9 +100,9 @@ export default function CarouselHome() {
                     <div className="carousel-item">
                         <Image
                             alt="Carousel"
-                            src={imgHeroB}
-                            width="1920"
-                            height="960"
+                            src="/cikuya.jpg"
+                            width={1920}
+                            height={960}
                             className="d-block w-100 carousel-zoom"
                         />
                         <div className="carousel-overlay"></div>

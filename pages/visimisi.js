@@ -3,34 +3,32 @@ import Head from "next/head";
 import NavBarTop from "../components/NavBarTop";
 import Footer from "../components/Footer";
 import BreadcrumbArea from "../components/BreadcrumbArea";
-import imgDesa from "../public/hero.webp";
 import Image from "next/image";
 import BackToTop from "../components/BackToTop";
 
-const title = "Visi MIsi";
+const title = "Visi Misi";
 
-export default function Sejarah({ posts }) {
-
-    let [namaDesa, setNamaDesa] = useState("Alang Alang");
+export default function Sejarah() {
+    const [namaDesa, setNamaDesa] = useState("Neglasari");
 
     useEffect(() => {
-        namaDesa = localStorage.getItem("namaDesa");
-        setNamaDesa(namaDesa);
-    });
-    
+        const storedNamaDesa = localStorage.getItem("namaDesa");
+        if (storedNamaDesa) {
+            setNamaDesa(storedNamaDesa);
+        }
+    }, []);
+
     return (
         <>
-
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={`Website Desa ${namaDesa}`} />
                 <link rel="icon" href="/favicon.ico" />
-                {/* <!-- Open Graph / Facebook --> */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={process.env.NEXT_PUBLIC_API_URL} />
                 <meta property="og:title" content={`Situs Resmi Desa ${namaDesa}`} />
                 <meta property="og:description" content={`Website Resmi Desa ${namaDesa}. Media komunikasi dan transparansi Pemerintah Desa`} />
-                <meta property="og:image" content={`${process.env.NEXT_PUBLIC_API_URL}/metalogo.jpg`}></meta>
+                <meta property="og:image" content={`${process.env.NEXT_PUBLIC_API_URL}/metalogo.jpg`} />
             </Head>
 
             <NavBarTop />
@@ -44,7 +42,7 @@ export default function Sejarah({ posts }) {
                         <div className="card bg-card-primary border-0 shadow-sm px-3 py-3 mb-4">
                             <h3 className="text-color-primary">Visi Dan Misi</h3>
                             <Image
-                                src={imgDesa}
+                                 src="/hero.webp"
                                 alt="Desa"
                                 className="img-fluid rounded my-3" />
                             <h5 className="mt-4 text-color-primary">Visi</h5>

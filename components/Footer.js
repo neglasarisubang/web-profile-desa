@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import React, { useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import imgLogo from "../public/logo.png";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
@@ -19,7 +19,7 @@ export default function Footer() {
             setNamaKecamatan(storedNamaKecamatan);
         }
     }, []);
-    
+
     return (
         <>
             <style jsx>{`
@@ -47,24 +47,25 @@ export default function Footer() {
                         <div className="col-md-8 col-lg-4 my-2 my-md-0">
                             <h4>Tentang Web</h4>
                             <Image src={imgLogo} className="img-fluid mb-2" alt="image" height={100} width={100} />
-                            <p className="text-white-80 text-15">Website Resmi Rt19 Rw10 {namaDesa}, Kec. {namaKecamatan}, Kabupaten Subang, Jawa
-                                Barat. Media komunikasi dan transparansi Warga</p>
+                            <p className="text-white-80 text-15">
+                                Website Resmi Rt19 Rw10 {namaDesa}, Kec. {namaKecamatan}, Kabupaten Subang, Jawa Barat. Media komunikasi dan transparansi Warga
+                            </p>
                         </div>
                         <div className="col-md-6 col-lg-3 my-2 my-md-0">
                             <h5 className="mb-3">Kontak Desa</h5>
                             <ul className="list-unstyled text-white-80 text-decoration-none text-15">
                                 <li className="my-2">
                                     <div className="d-flex">
-                                        <i className="me-2"><FaMapMarkerAlt/></i>
+                                        <i className="me-2"><FaMapMarkerAlt /></i>
                                         Jl. Raya {namaDesa} Kec. {namaKecamatan}, Subang, 41252
                                     </div>
                                 </li>
                                 <li className="my-2">
-                                    <i className="me-2"><FaPhoneAlt/></i>
+                                    <i className="me-2"><FaPhoneAlt /></i>
                                     083 815 432 987
                                 </li>
                                 <li className="my-2">
-                                    <i className="me-2"><FaEnvelope/></i>
+                                    <i className="me-2"><FaEnvelope /></i>
                                     admin@web.id
                                 </li>
                             </ul>
@@ -72,57 +73,48 @@ export default function Footer() {
                         <div className="col-md-6 col-lg-3 my-2 my-md-0">
                             <h5 className="mb-3">Kontak Penting</h5>
                             <ul className="list-unstyled text-white-80 text-decoration-none text-15">
-                                <li className="my-2">
-                                    Puskesmas - (0321) 876208
-                                </li>
-                                <li className="my-2">
-                                    Polsek - (0321) 861184
-                                </li>
-                                <li className="my-2">
-                                    Damkar - (0321) 854928
-                                </li>
-                                <li className="my-2">
-                                    PLN - 123
-                                </li>
+                                <li className="my-2">Puskesmas - (0321) 876208</li>
+                                <li className="my-2">Polsek - (0321) 861184</li>
+                                <li className="my-2">Damkar - (0321) 854928</li>
+                                <li className="my-2">PLN - 123</li>
                             </ul>
                         </div>
                         <div className="col-md-6 col-lg-2 my-2 my-md-0">
                             <h5 className="mb-3">Aplikasi Desa</h5>
                             <ul className="list-unstyled text-white-80 text-decoration-none text-15">
                                 <li className="my-2">
-                                    <a href="/" className="text-decoration-none text-white-80" rel="noreferrer" target="_blank">Sistem Desa</a>
+                                    <Link href="/" legacyBehavior><a className="text-decoration-none text-white-80">Sistem Desa</a></Link>
                                 </li>
                                 <li className="my-2">
-                                    <a href="/" className="text-decoration-none text-white-80" rel="noreferrer" target="_blank">Pengaduan Online</a>
+                                    <Link href="/" legacyBehavior><a className="text-decoration-none text-white-80">Pengaduan Online</a></Link>
                                 </li>
                                 <li className="my-2">
-                                    <a href="/" className="text-decoration-none text-white-80" rel="noreferrer" target="_blank">Pengajuan Surat</a>
+                                    <Link href="/" legacyBehavior><a className="text-decoration-none text-white-80">Pengajuan Surat</a></Link>
                                 </li>
                                 <li className="my-2">
-                                    <a href="/" className="text-decoration-none text-white-80" rel="noreferrer" target="_blank">Info Kesehatan</a>
+                                    <Link href="/" legacyBehavior><a className="text-decoration-none text-white-80">Info Kesehatan</a></Link>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="row pt-3 pb-md-0 mt-4 border-top-dark">
-                        <div className="col-md-8  text-center text-md-start text-15">
-                            <p className="text-white-80">Copyright © 
-                                <a href="#" className="text-decoration-none text-white-80"> Kp Cikuya {namaDesa}</a>. 
-                                All rights reserved
+                        <div className="col-md-8 text-center text-md-start text-15">
+                            <p className="text-white-80">
+                                Copyright © <Link href="#" legacyBehavior><a className="text-decoration-none text-white-80">Kp Cikuya {namaDesa}</a></Link>. All rights reserved
                             </p>
                         </div>
                         <div className="col-md-4 mb-3 text-center text-md-end ">
                             <a href="https://web.facebook.com/" className="mx-2 text-white-80" aria-label="Facebook" rel="noreferrer" target="_blank">
-                                <i className=""><FaFacebook /></i>
+                                <FaFacebook />
                             </a>
                             <a href="https://twitter.com/" className="mx-2 text-white-80" aria-label="Twitter" rel="noreferrer" target="_blank">
-                                <i className=""><FaTwitter /></i>
+                                <FaTwitter />
                             </a>
                             <a href="https://www.youtube.com/" className="mx-2 text-white-80" aria-label="Youtube" rel="noreferrer" target="_blank">
-                                <i className=""><FaYoutube /></i>
+                                <FaYoutube />
                             </a>
                             <a href="https://www.instagram.com/" className="mx-2 text-white-80" aria-label="Instagram" rel="noreferrer" target="_blank">
-                                <i className=""><FaInstagram /></i>
+                                <FaInstagram />
                             </a>
                         </div>
                     </div>
