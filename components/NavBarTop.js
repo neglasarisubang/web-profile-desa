@@ -79,7 +79,7 @@ useEffect(() => {
                     <div className="row">
                         <div className="col-lg-6 col-sm-8">
                             <div className="">
-                                <a href="https://wa.me/68123456789" rel="noreferrer" target="_blank" className="text-decoration-none text-14 text-color-tertiary">
+                                <a href="https://wa.me/683815432987" rel="noreferrer" target="_blank" className="text-decoration-none text-14 text-color-tertiary">
                                     <i className="me-2"><FaPhoneAlt /></i>
                                     68123456789
                                 </a>
@@ -127,7 +127,6 @@ useEffect(() => {
                         </a>
                     </Link>
 
-                    <div className="nav-link ms-auto order-0 order-xl-1" aria-current="page"><ThemeToggle /></div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="icon-toggle"><FaBars /></i>
                     </button>
@@ -260,6 +259,7 @@ useEffect(() => {
                                 <a className="nav-link" aria-current="page"><ThemeToggle /></a>
                             </li> */}
                         </ul>
+                       <div className="nav-link ms-auto order-0 order-xl-1" aria-current="page"><ThemeToggle /></div>
                     </div>
                 </div>
             </nav>
